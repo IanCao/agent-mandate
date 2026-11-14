@@ -26,14 +26,22 @@ A fooled reviewer wastes a call. It cannot overspend, revive a revoked mandate, 
 https://github.com/IanCao/agent-mandate
 https://github.com/IanCao/agent-mandate/blob/main/contracts/agent_mandate.py
 https://github.com/IanCao/agent-mandate/blob/main/README.md
+https://explorer-studio.genlayer.com/address/0xF9923Cfb60bbEAF55A6e5e736f8c1A236a89024f
 ```
 
-第一条是机器校验 `github-repo` 用的仓库根，全新仓库，不会被判重。
+第一条是机器校验 `github-repo` 用的仓库根，全新仓库，不会被判重。第四条是本周
+Intelligent Contracts 强制要求的 `genlayer-explorer-contract` 证据，缺了会报
+`Missing required evidence`。
 
-## 部署（可选）
+## 部署（已完成）
 
 Studio → Studionet → 粘贴 `contracts/agent_mandate.py`，无构造参数。
-部署后把 explorer 地址作为第四条证据。
+
+| 项 | 值 |
+|---|---|
+| 地址 | `0xF9923Cfb60bbEAF55A6e5e736f8c1A236a89024f` |
+| 构造参数 | 无 |
+| 链上校验 | `gen_getContractCode` / `gen_getContractSchema` 读到 `create_mandate`、`close`、`get_mandate`；源码 17,663 字符与仓库文件逐字节一致 |
 
 ## 自检
 
